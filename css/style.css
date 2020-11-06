@@ -127,13 +127,16 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
-  font-size: 8.75rem;
 }
 
-.pricing-card__price span {
+.pricing-card__price__dollar-sign {
   display: inline-block;
   margin-right: 1rem;
   font-size: 5rem;
+}
+
+.pricing-card__price__number {
+  font-size: 8.75rem;
 }
 
 .pricing-card__features {

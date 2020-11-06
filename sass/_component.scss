@@ -83,12 +83,15 @@
         display: flex;
         align-items: center;
         margin-bottom: 3rem;
-        font-size: 8.75rem;
 
-        span {
+        &__dollar-sign {
             display: inline-block;
             margin-right: 1rem;
             font-size: 5rem;
+        }
+
+        &__number {
+            font-size: 8.75rem;
         }
     }
 
