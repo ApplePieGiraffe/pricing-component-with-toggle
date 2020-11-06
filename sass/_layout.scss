@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 2rem;
+    background: url('../img/bg-bottom.svg'), url('../img/bg-top.svg'), var(--color-very-light-greyish-blue);
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+
+    @media only screen and (min-width: 1150px) {
+        padding: 9rem 5rem;
+        min-height: 100vh;
+    }
+}
+
+.heading {
+    margin-bottom: 17rem;
+}
+
+.pricing-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 1150px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}

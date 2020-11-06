@@ -1,0 +1,21 @@
+:root {
+    --color-gradient-1: hsl(236, 72%, 79%);
+    --color-gradient-2: hsl(237, 63%, 64%);
+    --color-very-light-greyish-blue: hsl(240, 78%, 98%);
+    --color-light-greyish-blue: hsl(234, 14%, 74%);
+    --color-greyish-blue: hsl(233, 13%, 49%);
+    --color-dark-greyish-blue: hsl(232, 13%, 33%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
