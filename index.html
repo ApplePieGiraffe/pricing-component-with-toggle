@@ -10,7 +10,15 @@
 </head>
 <body>
     <h1 class="heading">Our Pricing</h1>
-    <!-- TOGGLE -->
+
+    <div class="toggle-switch-wrapper">
+        <label for="toggle-switch" class="toggle-switch__label">Annually</label>
+        <button class="toggle-switch__btn" id="toggle-switch" aria-pressed="true">
+            <div class="toggle-switch__circle"></div>
+        </button>
+        <label for="toggle-switch" class="toggle-switch__label">Monthly</label>
+    </div>
+
     <div class="pricing-cards-wrapper">
         <article class="pricing-card pricing-card--white pricing-card--left">
             <h2 class="pricing-card__title">Basic</h2>
@@ -55,14 +63,6 @@
         </article>
     </div>
 
-
-    <!-- Annually
-    Monthly
- 
-    &dollar;199.99
-
-    &dollar;249.99
-
-    &dollar;399.99 -->
+    <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/ApplePieGiraffe" target="_blank">ApplePieGiraffe</a>.</p>
 </body>
 </html>

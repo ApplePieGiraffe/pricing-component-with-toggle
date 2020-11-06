@@ -1,3 +1,65 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(40rem);
+            transform: translateX(40rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(40rem);
+            transform: translateX(40rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 :root {
   --color-gradient-1: hsl(236, 72%, 79%);
   --color-gradient-2: hsl(237, 63%, 64%);
@@ -20,6 +82,63 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.toggle-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle-switch__label {
+  color: var(--color-light-greyish-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle-switch__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 7rem;
+  height: 4rem;
+  margin: 0 3rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0 .5rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(var(--color-gradient-1)), to(var(--color-gradient-2)));
+  background: linear-gradient(to bottom right, var(--color-gradient-1), var(--color-gradient-2));
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.toggle-switch__btn:hover {
+  opacity: 50%;
+}
+
+.toggle-switch__circle {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.toggle-switch__circle--annual {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .pricing-card {
@@ -104,13 +223,22 @@ html {
   .pricing-card--left {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    -webkit-animation: slideOutLeft 1s ease;
+            animation: slideOutLeft 1s ease;
   }
+}
+
+.pricing-card--middle {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1150px) {
   .pricing-card--right {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    -webkit-animation: slideOutRight 1s ease;
+            animation: slideOutRight 1s ease;
   }
 }
 
@@ -127,6 +255,8 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
+  -webkit-animation: fadeIn 1s ease;
+          animation: fadeIn 1s ease;
 }
 
 .pricing-card__price__dollar-sign {
@@ -190,6 +320,7 @@ html {
 }
 
 body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +345,11 @@ body {
 }
 
 .heading {
-  margin-bottom: 17rem;
+  margin-bottom: 5rem;
+}
+
+.toggle-switch-wrapper {
+  margin-bottom: 8rem;
 }
 
 .pricing-cards-wrapper {
@@ -237,6 +372,21 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: var(--color-dark-greyish-blue);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-greyish-blue);
 }
 
 body {

@@ -1,0 +1,30 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(40rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(-40rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}

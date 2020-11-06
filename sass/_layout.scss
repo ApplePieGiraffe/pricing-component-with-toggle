@@ -1,4 +1,5 @@
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +15,11 @@ body {
 }
 
 .heading {
-    margin-bottom: 17rem;
+    margin-bottom: 5rem;
+}
+
+.toggle-switch-wrapper {
+    margin-bottom: 8rem;
 }
 
 .pricing-cards-wrapper {
@@ -24,5 +29,19 @@ body {
     @media only screen and (min-width: 1150px) {
         flex-direction: row;
         align-items: center;
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--color-dark-greyish-blue);
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: var(--color-greyish-blue);
     }
 }

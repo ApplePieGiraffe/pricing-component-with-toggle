@@ -1,3 +1,56 @@
+// =================
+// | TOGGLE SWITCH |
+// =================
+
+.toggle-switch {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        color: var(--color-light-greyish-blue);
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 7rem;
+        height: 4rem;
+        margin: 0 3rem;
+        border: none;
+        border-radius: 50rem;
+        padding: 0 .5rem;
+        background: linear-gradient(to bottom right, var(--color-gradient-1), var(--color-gradient-2));
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            opacity: 50%;
+        }
+    }
+
+    &__circle {
+        align-self: flex-end;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: white;
+
+        &--annual {
+            align-self: flex-start;
+        }
+    }
+}
+
+
+// =================
+// | PRICING CARDS |
+// =================
+
 .pricing-card {
     display: flex;
     flex-direction: column;
@@ -64,13 +117,20 @@
         @media only screen and (min-width: 1150px) {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            animation: slideOutLeft 1s ease;
         }
+    }
+
+    &--middle {
+        position: relative;
+        z-index: 1;
     }
 
     &--right {
         @media only screen and (min-width: 1150px) {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+            animation: slideOutRight 1s ease;
         }
     }
 
@@ -83,6 +143,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 3rem;
+        animation: fadeIn 1s ease;
 
         &__dollar-sign {
             display: inline-block;
@@ -110,6 +171,10 @@
         width: 100%;
     }
 }
+
+// ===========
+// | BUTTONS |
+// ===========
 
 .btn {
     height: 5.5rem;
